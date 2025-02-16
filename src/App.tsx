@@ -8,7 +8,7 @@ function App() {
     character: false,
   });
   const [password, setPassword] = useState("");
-  const [copyMessage, setCopyMessage] = useState(""); // State for copy notification
+  const [copyMessage, setCopyMessage] = useState("");
 
   const passwordRef = useRef(null);
 
@@ -26,9 +26,9 @@ function App() {
 
   const copyPasswordToClipboard = useCallback(() => {
     window.navigator.clipboard.writeText(password).then(() => {
-      setCopyMessage("Copied to clipboard!"); 
+      setCopyMessage("Copied to clipboard!");
       setTimeout(() => {
-        setCopyMessage(""); 
+        setCopyMessage("");
       }, 2000);
     });
   }, [password]);
